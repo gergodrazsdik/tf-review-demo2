@@ -1,6 +1,6 @@
-# tf-review-demo
+# tf-review-demo2
 
-GitHub template for an OpenTofu project reviewed by `tf-review`. Its seeded bad-PR branches double as the reviewer's eval suite. The plan is in `../tf-review/docs/plan.md`.
+An OpenTofu project reviewed by `tf-review`, made from the `tf-review-demo` template to prove onboarding takes one bootstrap map entry (M4's gate). The plan is in `../tf-review/docs/plan.md`.
 
 ## Commands
 
