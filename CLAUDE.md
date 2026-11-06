@@ -10,7 +10,7 @@ An OpenTofu project reviewed by `tf-review`, made from the `tf-review-demo` temp
 
 ## Conventions
 
-- Plans run on every PR through the plan identity. Applies run on merge, in CI, behind the `prod` environment approval: agents never apply.
+- Plans run on every PR through the plan identity, which only reads state. On merge, `apply.yml` plans `main`, and the `prod` approval applies exactly that plan; a weekly run of the same plan fails on drift. Agents never apply.
 - Resources follow ADR-001 (names) and ADR-002 (tags) in `tf-standards`, except on seeded branches that break them on purpose.
 - Bootstrap in `tf-review` creates this repo's state container, identities, Actions secrets and variables, and environments.
 - Plans stay in the job log, not PR comments, and the Azure IDs are Actions secrets so logs mask them: secrets aren't masked in anything a workflow posts to a PR, so never post raw plan output.
