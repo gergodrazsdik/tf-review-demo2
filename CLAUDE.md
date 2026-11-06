@@ -14,4 +14,4 @@ An OpenTofu project reviewed by `tf-review`, made from the `tf-review-demo` temp
 - Resources follow ADR-001 (names) and ADR-002 (tags) in `tf-standards`, except on seeded branches that break them on purpose.
 - Bootstrap in `tf-review` creates this repo's state container, identities, Actions secrets and variables, and environments.
 - Plans stay in the job log, not PR comments, and the Azure IDs are Actions secrets so logs mask them: secrets aren't masked in anything a workflow posts to a PR, so never post raw plan output.
-- `main` takes squash-merged PRs only, and third-party actions are pinned to full SHAs with `pinact`.
+- PRs merge by fast-forward (`just merge <pr>` in `tf-review`, which the user runs), so each commit lands as written: keep commits focused and signed. Third-party actions are pinned to full SHAs with `pinact`.
