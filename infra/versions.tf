@@ -19,6 +19,10 @@ terraform {
       vault_uri      = "https://kv-tf-review-state-prod.vault.azure.net"
       vault_key_name = "state-tf-review-demo2"
       key_length     = 32
+
+      # Read only from here, not from ARM_USE_OIDC. CI signs in with GitHub's OIDC token, and on a laptop, where
+      # there's no such token, this falls through to the Azure CLI.
+      use_oidc = true
     }
 
     method "aes_gcm" "state" {
