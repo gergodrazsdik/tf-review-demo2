@@ -1,0 +1,17 @@
+---
+name: plan
+
+on:
+  pull_request:
+
+permissions:
+  contents: read
+
+jobs:
+  tf-review:
+    uses: gergodrazsdik/tf-review/.github/workflows/tf-review.yml@359b61d4a05fa000ea46cbb384b9c4412109ea6c # v0.0.12
+    permissions:
+      contents: read
+      id-token: write
+      pull-requests: write
+    secrets: inherit
