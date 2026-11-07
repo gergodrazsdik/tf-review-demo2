@@ -17,7 +17,7 @@
       "source": {
         "source": "github",
         "repo": "gergodrazsdik/tf-review",
-        "ref": "plugin-v0.1.0"
+        "ref": "plugin-v0.1.1"
       }
     }
   },
