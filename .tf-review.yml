@@ -1,7 +1,7 @@
 ---
 # The reviewer reads this from the PR's base commit, so changes apply after they merge.
 version: 1
-tool_version: 1.13.9
+tool_version: 1.13.10
 standards:
   repository: gergodrazsdik/tf-standards
   commit: 0f31069c8477e8a9fe9c01e54534dfcb0647c79a
